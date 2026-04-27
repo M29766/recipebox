@@ -4,7 +4,7 @@ function RecipePopup({ recipe, onClose }) {
     return (
         <div className="modal" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                {recipe.image && <img src={recipe.image} className="popup-img" />}
+                {recipe.image && <img src={recipe.image} alt="recipe" className="popup-img" />}
 
                 <h2>{recipe.title}</h2>
                 <p>{recipe.description}</p>
