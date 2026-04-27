@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f8f4ef;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2b2420;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.navbar {
+    min-height: 76px;
+    background: #1f1f1f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ff7043;
+}
+
+.user-name {
+    color: #ffb199;
+    font-weight: 700;
+}
+
+.logout-btn {
+    background: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 9px 15px;
+    font-weight: 700;
+}
+
+/* Auth */
+
+.auth-page {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 18px;
+}
+
+.auth-card {
+    background: white;
+    width: 400px;
+    padding: 32px;
+    border-radius: 22px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h2 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 13px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.auth-card input:focus {
+    border-color: #ff7043;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 13px;
+    background: #ff7043;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.auth-card p {
+    text-align: center;
+    color: #6f625a;
+}
+
+.auth-card a {
+    color: #ff7043;
+    font-weight: 700;
+}
+
+/* Add Recipe Form */
+
+.zomato-form {
+    max-width: 820px;
+    margin: 36px auto;
+    padding: 0 20px 50px;
+}
+
+.zomato-form h2 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.form-subtitle {
+    color: #756a62;
+    margin-bottom: 26px;
+}
+
+.z-card {
+    background: white;
+    padding: 24px;
+    margin-bottom: 22px;
+    border-radius: 22px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.07);
+}
+
+.z-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.z-card input,
+.z-card textarea,
+.z-card select {
+    width: 100%;
+    margin: 8px 0;
+    padding: 13px 14px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 15px;
+    background: white;
+}
+
+.z-card textarea {
+    min-height: 95px;
+    resize: vertical;
+}
+
+.z-card input:focus,
+.z-card textarea:focus,
+.z-card select:focus {
+    border-color: #ff7043;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+.image-upload {
+    text-align: center;
+    border: 2px dashed #ffc8b7;
+    position: relative;
+    overflow: hidden;
+    background: #fffaf7;
+}
+
+.image-upload label {
+    display: block;
+    cursor: pointer;
+}
+
+.image-upload p {
+    color: #8a7468;
+    font-weight: 700;
+    padding: 38px 10px;
+}
+
+.image-upload img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.image-upload input {
+    display: none;
+}
+
+.add-btn {
+    background: #fff0ea;
+    color: #ff7043;
+    border: 1px solid #ffb199;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+.remove-small {
+    background: #ffeded;
+    color: #ef3f3f;
+    border: 1px solid #ffabab;
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.z-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.save,
+.cancel {
+    border: none;
+    padding: 13px 22px;
+    border-radius: 14px;
+    font-weight: 800;
+}
+
+.save {
+    background: #ff7043;
+    color: white;
+}
+
+.save:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.cancel {
+    background: #e9e3df;
+    color: #2b2420;
+}
+
+/* Planner */
+
+.planner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.day-card {
+    background: white;
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+}
+
+.day-card h3 {
+    margin-top: 0;
+}
+
+.day-card select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.assign-btn {
+    width: 100%;
+    background: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 12px;
+    font-weight: 800;
+}
+
+.planned-recipe {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+}
+
+.planned-recipe img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.remove-btn {
+    background: #ffeded;
+    color: #ef3f3f;
+    border: 1px solid #ff9b9b;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 800;
+}
+
+/* Empty */
+
+.empty-box {
+    border: 2px dashed #f0cabb;
+    border-radius: 20px;
+    text-align: center;
+    padding: 45px 20px;
+    margin-top: 36px;
+    background: #fffaf7;
+}
+
+.empty-box h2 {
+    margin-top: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 16px 20px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .z-actions {
+        flex-direction: column;
+    }
+
+    .save,
+    .cancel {
+        width: 100%;
+    }
+}
+
+.image-upload {
+    min-height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ffb49e;
+    background: #fffaf7;
+    cursor: pointer;
+    text-align: center;
+}
+
+.image-upload p {
+    color: #7b6257;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.image-upload img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 14px;
+}
