@@ -10,7 +10,7 @@ function Feed() {
 
     const fetchRecipes = async () => {
         try {
-            const res = await axios.get("https://recipebox-backend-ankq.onrender.com/api/recipes");
+            const res = await axios.get("https://recipebox-vf1j.onrender.com/api/recipes");
             setRecipes(res.data);
         } catch (err) {
             console.error("FEED ERROR:", err);
@@ -25,7 +25,7 @@ function Feed() {
         try {
             const token = localStorage.getItem("token");
 
-            await axios.delete(`https://recipebox-backend-ankq.onrender.com/api/recipes/${deleteId}`, {
+            await axios.delete(`https://recipebox-vf1j.onrender.com/api/recipes/${deleteId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
