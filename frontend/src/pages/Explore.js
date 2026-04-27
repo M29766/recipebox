@@ -4,7 +4,7 @@ import RecipeCard from "../components/RecipeCard";
 import RecipePopup from "../components/RecipePopup";
 import "./Home.css";
 
-const API = "https://recipebox-backend-ankq.onrender.com/api";
+const API = "https://recipebox-vf1j.onrender.com/api";
 
 function Explore() {
   const [recipes, setRecipes] = useState([]);
