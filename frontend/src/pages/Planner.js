@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Home.css";
 
-const API_URL = "https://recipebox-backend-ankq.onrender.com/api/recipes";
+const API_URL = "https://recipebox-vf1j.onrender.com/api/recipes";
 
 const days = [
     "Monday",
