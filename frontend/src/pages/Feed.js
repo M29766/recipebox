@@ -3,7 +3,7 @@ import axios from "axios";
 import RecipePopup from "../components/RecipePopup";
 import "./Home.css";
 
-const API = "https://recipebox-backend-ankq.onrender.com/api";
+const API = "https://recipebox-vf1j.onrender.com/api";
 
 function Feed() {
   const [recipes, setRecipes] = useState([]);
