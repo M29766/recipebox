@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/styles.css";
 
-const API_URL = "https://recipebox-backend-ankq.onrender.com/api/auth/register";
+const API_URL = "https://recipebox-vf1j.onrender.com/api/auth/register";
 
 function Register() {
     const [form, setForm] = useState({
