@@ -2,8 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "../styles/styles.css";
 
-const API_URL = "http://localhost:5000/api/recipes";
-
+const API_URL = "https://recipebox-vf1j.onrender.com/api/recipes";
 function AddRecipe() {
     const [form, setForm] = useState({
         title: "",
