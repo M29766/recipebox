@@ -326,7 +326,22 @@
         width: 100%;
         height: 190px;
     }
+    .explore-search {
+  margin-bottom: 22px;
+}
 
+.explore-search input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid #ead2c8;
+  font-size: 16px;
+  outline: none;
+}
+
+.explore-search input:focus {
+  border-color: #ff7043;
+}
     .search-row {
         grid-template-columns: 1fr;
     }
